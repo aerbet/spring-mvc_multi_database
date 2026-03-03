@@ -19,6 +19,8 @@ public record Booking (
         @Max(5)
         @Min(2)
         Integer numberOfPerson,
+        @NotNull
+        @FutureOrPresent
         @DateTimeFormat(pattern = "yyyy-MM-dd")
         LocalDate dateOfBooking
 ) {
